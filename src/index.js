@@ -12,7 +12,16 @@ exports.min = function min(array) {
 };
 
 exports.max = function max(array) {
-    return 0;
+    if (array === undefined || array.length === 0) {
+        return 0;
+    }
+    let max = array[0];
+    for (var i = 0; i < array.length; i++) {
+        if (max <= array[i]) {
+            max = array[i];
+        }
+    }
+    return max;
 };
 
 exports.avg = function avg(array) {
