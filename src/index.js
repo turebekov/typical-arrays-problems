@@ -28,6 +28,9 @@ exports.avg = function avg(array) {
     if (array === undefined || array.length === 0) {
         return 0;
     }
-    const sum = array.reduce((accumulator, item) => accumulator + item, 0);
+    let sum = 0;
+    for (var i = 0; i < array.length; i++) {
+        sum = sum + array[i];
+    }
     return sum / array.length;
 };
